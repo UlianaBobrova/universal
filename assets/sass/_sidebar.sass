@@ -1,0 +1,227 @@
+body
+    counter-reset: section
+.sidebar
+    &-front-page
+        margin-left: 30px
+        margin-top: 30px
+.widget
+    background-color: #fff
+    border-radius: 10px
+    &-title
+        text-transform: uppercase
+        padding: 20px 25px
+        border-bottom: 1px solid #D9DADB
+        font-family: 'Lato Black', sans-serif
+        font-style: normal
+        font-weight: 900
+        font-size: 14px
+    &-downloader
+        position: relative
+        background: #3BBDC4 url('../images/file-icon.svg') no-repeat top 22px right 24px
+        border-radius: 10px
+        color: #ffffff
+        padding: 25px
+        padding-bottom: 55px
+        max-width: 263px
+        overflow: hidden
+        .widget
+            &-title
+                margin-top: 0
+                font-family: 'Roboto Slab', serif
+                font-style: normal
+                font-weight: bold
+                font-size: 16px
+                line-height: 25px 
+                border: none
+                padding: 0
+                text-transform: none
+            &-description
+                color: #C1F4F5
+                font-family: 'Lato Black', sans-serif
+                font-style: normal
+                font-weight: normal
+                font-size: 14px
+                line-height: 20px
+                margin: 0
+            &-link
+                position: absolute
+                bottom: 0
+                left: 0
+                right: 0
+                text-align: center
+                padding-top: 12px
+                padding-bottom: 13px
+                border-top: 1px solid rgba(#fff, 0.75)
+                color: #ffffff
+                text-decoration: none
+                font-family: 'Lato Black', sans-serif
+                font-style: normal
+                font-weight: 900
+                font-size: 14px
+                line-height: 20px
+                display: inline-flex
+                align-items: center
+                justify-content: center
+                &-icon
+                    margin-right: 10px
+    &_tag_cloud
+        margin-bottom: 33px
+    .tagcloud
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        flex-wrap: wrap
+        max-width: 263px
+        padding: 25px
+    .tag-cloud-link
+        margin-right: 10px
+        margin-bottom: 15px
+        line-height: 20px
+        color: #262D33
+        text-decoration: none
+        font-family: 'Lato Black', sans-serif
+        font-style: normal
+        font-weight: 900
+        font-size: 14px
+        line-height: 20px
+        padding: 5px 15px
+        border: 1px solid #D9DADB
+        border-radius: 5px
+    &-social
+        height: 171px
+        display: flex
+        align-items: center
+        justify-content: space-evenly
+        flex-wrap: wrap
+        padding: 30px 25px
+        .widget
+            &-title
+                margin: 0
+                padding: 0
+                flex-basis: 100%
+                text-align: center
+                border-bottom: none
+                font-family: 'Roboto Slab', serif
+                font-style: normal
+                font-weight: bold
+                font-size: 20px
+                color: #262D33
+                text-transform: none
+    &-resent-post
+        &-last
+            display: flex
+            justify-content: center
+            a
+                text-align: center
+                font-family: 'Lato Bold', sans-serif
+                font-style: normal
+                font-weight: 700
+                font-size: 14px
+                line-height: 20px
+                color: #262D33
+                text-decoration: none
+                position: relative
+                &:visited
+                    color: #262D33
+                &::before
+                    display: none                    
+        a
+            display: flex
+            align-items: center
+            justify-content: space-between
+            text-decoration: none
+            padding: 17px 0
+            position: relative
+            &:not(:last-child)
+                border-bottom: 1px solid #D9DADB
+            &:before
+                counter-increment: section
+                content: counter(section)
+                position: absolute
+                right: 5px
+                font-family: "Lato Black", sans-serif
+                font-style: italic
+                font-weight: 900
+                font-size: 70px
+                line-height: 50px
+                color: #262D33
+                opacity: 0.08
+        img
+            width: 60px
+            height: 60px
+            margin-right: 10px
+        &-wrapper
+            padding: 0 25px 17px
+            border-bottom: 1px solid #D9DADB
+        h4
+            font-family: 'Lato Regular', sans-serif
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 20px
+            color: #4B5157
+            margin-top: 0
+            margin-bottom: 5px
+        span
+            font-size: 12px
+            line-height: 15px
+            color: #939699
+@media screen and ( max-width: 1200px )
+    .sidebar
+        &-front-page
+            width: 30%
+            margin-left: 0
+    .widget
+        &_tag_cloud
+            margin-bottom: 22px
+@media screen and ( max-width: 1024px )           
+    .widget
+        &-social
+            flex-direction: column  
+            height: 100% 
+            padding: 16px 25px
+@media screen and ( max-width: 960px )
+    .sidebar
+        &-front-page
+            width: 100%
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            margin-top: 0
+    .widget
+        &-social
+            order: 1
+            flex-direction: row 
+            height: 100% 
+            max-width: 50%
+            width: 49%
+            padding: 30px 25px
+            margin-bottom: 20px
+            .widget
+                &-title
+                    margin-bottom: 16px
+        &-downloader
+            order: 0
+            max-width: 50%
+            width: 49%
+            margin-bottom: 20px
+        &_tag_cloud
+            order: 2
+            width: 100%
+        .tagcloud
+            max-width: 100%
+@media screen and ( min-width: 320px) and (max-width: 420px )
+    .widget
+        &-social
+            width: 100%
+            max-width: 100%
+        &-downloader
+            width: 100%
+            max-width: 100%
+
+            
+
+
+
+
+               

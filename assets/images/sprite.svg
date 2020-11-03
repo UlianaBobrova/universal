@@ -1,0 +1,14 @@
+<svg width="0" height="0" class="hidden">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 15" id="photo">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 3V1a1 1 0 011-1h14a1 1 0 011 1v10a1 1 0 01-1 1h-2v2a1 1 0 01-1 1h-14a1 1 0 01-1-1V4a1 1 0 011-1h2zm12 9h-11a1 1 0 01-1-1V4h-2v10h14v-2zM4.5 1v10h14V1h-14zm14 10h-14v-1l3-3 3 2 4-4 4 5v1zM10 6a1.5 1.5 0 110-3 1.5 1.5 0 010 3z"></path>
+  </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" id="Comment-icon">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.135 12v3L8.36 12H2.25a1.5 1.5 0 01-1.5-1.5V3a1.5 1.5 0 011.5-1.5h10.5a1.5 1.5 0 011.5 1.5v7.5a1.5 1.5 0 01-1.5 1.5h-1.615z"></path>
+  </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" id="Heart-icon">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.84 2.96c-.67-.748-1.56-1.16-2.505-1.16-.947 0-1.74.412-2.41 1.16l-.425.68-.425-.68c-.669-.748-1.463-1.16-2.41-1.16-.945 0-1.835.412-2.504 1.16C.78 4.505.78 7.02 2.16 8.564l4.949 4.757a.523.523 0 00.393.179c.14 0 .28-.06.387-.18l4.95-4.756c1.38-1.544 1.38-4.059 0-5.604z"></path>
+  </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="Bookmark-icon">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M5 1h10a2 2 0 012 2v16l-6.905-5L3 19V3a2 2 0 012-2z"></path>
+  </symbol>
+</svg>

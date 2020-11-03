@@ -1,0 +1,124 @@
+.other
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    .category-link
+        font-family: 'Lato Black', sans-serif
+        font-style: normal
+        font-weight: 900
+        font-size: 12px
+        line-height: 15px
+        text-transform: uppercase
+        color: #6E99AE
+    &-career
+        position: relative
+        background-color: #B9D2DE
+        flex-basis: 100%
+        height: 370px
+        border-radius: 10px
+        margin-bottom: 30px
+        overflow: hidden
+        &-info
+            padding: 35px
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+        &-thumb
+            width: 100%
+            height: 100%
+        &-title
+            font-family: 'Roboto Slab', serif
+            font-style: normal
+            font-weight: 900
+            font-size: 25px
+            line-height: 30px
+            color: #262D33
+            width: 243px
+            text-align: start
+            margin: 0
+            margin-bottom: 15px
+            margin-top: 20px
+        &-excerpt
+            width: 232px
+            text-align: start
+            font-family: 'Lato Regular', sans-serif
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 20px
+            color: #4B5157
+            margin: 0
+            margin-bottom: 45px
+    &-article
+        flex-basis: 100%
+        display: flex
+        justify-content: space-between
+        &-permalink
+            background-color: #fff
+            border-radius: 10px
+            width: 48%
+            padding: 25px
+            text-decoration: none
+        &-title
+            font-family: 'Roboto Slab', serif
+            font-style: normal
+            font-weight: bold
+            font-size: 16px
+            line-height: 25px
+            color: #262D33
+            margin: 0
+        &-excerpt
+            font-family: 'Lato Regular', sans-serif
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 20px
+            color: #4B5157
+            margin-bottom: 10px
+        &-date
+            font-family: 'Lato Regular', sans-serif
+            font-style: normal
+            font-weight: normal
+            font-size: 12px
+            line-height: 15px
+            color: #939699
+@media screen and ( max-width: 1200px )
+    .other
+        &-career
+            margin-bottom: 20px
+        &-article
+            a
+                flex-basis: 48%
+                width: 100%
+@media screen and ( max-width: 960px ) 
+    .other
+        &-career
+            img
+                object-fit: cover
+        &-article   
+            a
+                padding: 20px
+@media screen and ( max-width: 768px )
+    .other
+        &-career
+            margin-bottom: 10px
+        &-article
+            flex-direction: column
+            a
+                &:not(:last-child)
+                    margin-bottom: 10px
+@media screen and ( max-width: 576px )
+    .special
+        &-grid
+            flex-wrap: wrap
+            .photo-report
+                flex-basis: 100%
+                margin-bottom: 10px
+    .other
+        width: 100%
+        &-career
+            flex-basis: 100%
+            width: 100%

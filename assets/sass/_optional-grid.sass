@@ -1,0 +1,217 @@
+.option-grid
+    margin-bottom: 60px
+    &__wrapper
+        display: flex
+        margin-top: 60px
+    .news-grid
+        background: #fff
+        border-radius: 10px
+        width: 74%
+        padding: 0 25px 0 25px
+        overflow: hidden
+        margin: 0
+        margin-right: 29px
+        // flex-basis: 70%
+    .news-item
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        background: #fff
+        padding: 25px 0 25px 0
+        border-bottom: 1px solid #D9DADB
+        list-style: none
+        position: relative
+        &-top
+            display: flex
+            justify-content: space-between
+            align-items: center
+            width: 100%
+        &-excerpt
+            font-family: 'Lato Regular', sans-serif
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 20px
+            color: #4B5157
+            margin: 0
+        &-name
+            text-decoration: none
+        &-thumb
+            width: 336px
+            object-fit: cover
+            margin-right: 25px
+        &-right
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            justify-content: space-between
+            .post-title
+                font-family: 'Roboto Slab', serif
+                font-style: normal
+                font-weight: bold
+                font-size: 20px
+                line-height: 25px
+                color: #262D33
+                margin: 0
+                margin-top: 15px
+                margin-bottom: 15px
+            // .post-categories
+            //     list-style: none
+            //     padding: 0
+            //     margin: 0
+            //     a
+            //         text-decoration: none
+            //         font-weight: 900
+            //         font-size: 12px
+            //         line-height: 15px
+            //         text-transform: uppercase
+            //         color: #262D33
+    .author-info
+        display: flex
+        justify-content: space-between
+        position: absolute
+        bottom: 21px
+        width: 155px
+        .date
+            color: #939699
+            margin-right: 7px
+        .comments, .likes
+            display: flex
+            align-items: center
+            justify-content: space-between
+            margin-right: 7px
+            color: #939699
+            width: 30px
+.category-link
+    font-family: 'Lato Bold', sans-serif
+    text-transform: uppercase
+    font-weight: 900
+    font-size: 12px
+    line-height: 15px
+    text-decoration: none
+    &.opinion
+        color: #3BBDC4
+    &.hot
+        color: #FF4F52
+    &.compilation
+        color: #AC8EE3
+    &.news
+        color: #4592FF
+.sidebar-news
+    margin: 0
+    width: 23%
+    .widget-title
+        margin: 0
+@media screen and ( max-width: 1200px )
+    .sidebar-news
+        width: 30%
+    .option-grid
+        .news-grid
+            margin-right: 21px
+        .news-item
+            &-excerpt
+                height: 45px
+                width: 100%
+                overflow: hidden
+                text-overflow: ellipsis
+            &-thumb
+                width: 290px
+            &-right
+                .post-title
+                    height: 80px
+                    overflow: hidden
+                    text-overflow: ellipsis
+                    font-size: 18px
+                    margin-bottom: 5px
+@media screen and ( max-width: 1024px )
+    .sidebar-news
+        .widget
+            .resent-post
+                &-link
+                    &:before
+                        right: 5px
+                        top: 30px
+                &-thumb
+                    height: 80px
+                    object-fit: cover
+@media screen and ( max-width: 960px )
+    .sidebar-news
+        .widget
+            .resent-post
+                &-link
+                    flex-direction: column
+                    align-items: flex-start
+                    &:before
+                        right: 10px
+                        top: 20px
+    .option-grid
+        .news-item
+            flex-direction: column
+            margin-bottom: 10px
+            &:last-child
+                border-bottom: none
+            &-excerpt
+                margin-bottom: 20px
+            &-right
+                margin-top: 10px
+                .post-title
+                    height: 50px
+@media screen and ( max-width: 768px )
+    .option-grid
+        margin-bottom: 30px
+        .news-item
+            align-items: center
+            &-thumb
+                width: 100%
+                margin: 0
+        &__wrapper
+            margin-top: 30px
+@media screen and ( max-width: 576px )
+    .sidebar-news
+        .widget
+            &-title
+                padding: 15px 7px
+                font-size: 12px
+                text-align: center
+            .resent-post
+                &-link
+                    flex-direction: column
+                    align-items: flex-start
+                    &:before
+                        content: none
+                &-thumb
+                    // height: 100%
+                    margin-right: 0
+            &-resent-post
+                &-wrapper
+                    padding: 0 12px 17px
+@media screen and (min-width: 320px) and ( max-width: 420px )
+    .option-grid
+        &__wrapper
+            flex-wrap: wrap
+            .news-grid
+                margin: 0
+                width: 100%
+    .sidebar-news
+        width: 100%
+        margin-top: 20px
+        .widget
+            &-resent-post
+                img
+                    margin-bottom: 10px
+                &-wrapper
+                    display: flex
+                    flex-wrap: wrap
+                    justify-content: space-between
+                    a
+                        flex-basis: 45%
+                h4
+                    height: 40px
+                    margin-bottom: 20px
+                        
+
+
+
+
+
+    

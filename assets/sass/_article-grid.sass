@@ -1,0 +1,341 @@
+.main-grid
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+.article
+    &-grid
+        width: 850px
+        padding: 0
+        margin: 30px 0
+        list-style: none
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(30%, 1fr))
+        grid-template-rows: 2fr repeat(2, 1fr)
+        grid-auto-rows: minmax(200px, max-content)
+        grid-gap: 30px
+        flex-basis: 100%
+        &-permalink
+            text-decoration: none
+            color: #262D33
+            &:hover
+                color: #262D33
+            &:visited
+                color: #262D33
+        &-item
+            border-radius: 10px
+            background-color: #fff
+            overflow: hidden
+            &-1
+                grid-area: 1 / 1 / 2 / 3
+                padding: 35px 35px 53px 35px
+                position: relative
+                overflow: hidden
+                .category-name
+                    font-weight: 900
+                    font-size: 12px
+                    line-height: 15px
+                    letter-spacing: 0.5px
+                    text-transform: uppercase
+                    color: #6E99AE
+                .article-grid
+                    &-thumb
+                        position: absolute
+                        right: 0
+                        top: 0
+                        z-index: 0
+                    &-title
+                        max-width: 228px
+                        font-family: 'Roboto Slab', serif
+                        font-weight: bold
+                        font-size: 25px
+                        line-height: 30px 
+                        margin-top: 20px
+                        margin-bottom: 25px
+                    &-excerpt
+                        max-width: 228px
+                        font-style: normal
+                        font-weight: normal
+                        font-size: 14px
+                        line-height: 20px
+                        margin-bottom: 40px
+                        color: #4B5157
+                    &-info
+                        display: flex
+                        bottom: 0
+                        left: 0
+                        right: 0
+                        align-items: center
+                        justify-content: space-between
+                        position: absolute
+                        padding: 15px 35px
+                        border-top: 1px solid #D9DADB
+                        .author
+                            display: flex
+                            align-items: center
+                            width: 389px
+                            &-avatar
+                                width: 30px
+                                height: 30px
+                                border-radius: 50%
+                                margin-right: 10px
+                            &-name
+                                width: 390px
+                                white-space: nowrap
+                                overflow: hidden
+                                strong
+                                    font-family: "Lato Black", sans-serif
+                                    font-size: 14px
+                                    line-height: 20px
+                        .comments
+                            display: flex
+                            align-items: center
+                            &-counter
+                                color: #939699
+                                font-size: 12px
+                                line-height: 15px
+                                margin-left: 5px
+
+            &-2
+                grid-area: 1 / 3 / 2 / 4
+                position: relative
+                background-color: transparent
+                &:before    
+                    content: ''
+                    position: absolute
+                    z-index: 0
+                    background: linear-gradient(0deg, rgba(64, 48, 61, 0.35), rgba(64, 48, 61, 0.35))
+                    width: 100%
+                    height: 100%
+                .article-grid
+                    &-thumb
+                        position: absolute
+                        left: 0
+                        right: 0
+                        top: 0
+                        bottom: 0
+                        height: 100%
+                        z-index: -1
+                        object-fit: cover
+                    &-permalink
+                        position: absolute
+                        left: 0
+                        right: 0
+                        top: 0
+                        bottom: 0
+                        height: 100%
+                        display: flex
+                        flex-direction: column
+                        justify-content: space-between
+                        align-items: flex-start
+                        padding: 25px
+                    &-title
+                        font-family: 'Roboto Slab', serif
+                        font-style: normal
+                        font-weight: bold
+                        font-size: 16px
+                        line-height: 25px
+                        color: #FFFFFF
+                        letter-spacing: 0.5px
+                        text-transform: uppercase
+                        margin-top: 23px
+                        margin-bottom: 27px
+                .tag
+                    padding: 5px 12px
+                    background: #3dc47e
+                    border-radius: 3px
+                    color: #ffffff
+                    font-size: 12px
+                    line-height: 15px
+                    text-transform: capitalize
+                .category-name
+                    color: #E7D9FF
+                    font-family: 'Lato Black', sans-serif
+                    font-size: 12px
+                    line-height: 15px
+                    letter-spacing: 0.5px
+                    text-transform: uppercase
+                    margin: auto 0 0 0 
+                .author
+                    display: flex
+                    align-items: center
+                    &-info
+                        display: flex
+                        align-items: center
+                        flex-wrap: wrap
+                    &-name
+                        flex-basis: 100%
+                        color: #FFFFFF
+                        mix-blend-mode: normal
+                        opacity: 0.85
+                        font-style: normal
+                        font-weight: normal
+                        font-size: 14px
+                        line-height: 20px
+                    &-avatar
+                        width: 45px
+                        height: 45px
+                        border-radius: 50%
+                        margin-right: 10px
+                .comments, .likes, .date
+                    display: flex
+                    align-items: center
+                    color: #FFFFFF
+                    mix-blend-mode: normal
+                    opacity: 0.4
+                    font-style: normal
+                    font-weight: normal
+                    font-size: 12px
+                    line-height: 15px
+                    &:not(:last-child)
+                        margin-right: 7px
+                    &-counter
+                        margin-left: 5px
+            &-3
+                grid-area: 2 / 1 / 4 / 2
+                position: relative
+                background: transparent
+                .article-grid
+                    &-permalink
+                        position: absolute
+                        left: 0
+                        right: 0
+                        top: 0
+                        bottom: 0
+                        height: 100%
+                        display: flex
+                        background-color: #fff
+                        padding: 0 25px 30px 25px
+                    &-title
+                        margin-top: 290px
+                        font-family: 'Roboto Slab', serif
+                        font-style: normal
+                        font-weight: bold
+                        font-size: 16px
+                        line-height: 25px
+                        color: #262D33
+                        margin-bottom: 0
+                    &-thumb
+                        position: absolute
+                        left: 0
+                        right: 0
+                        top: 0
+                        height: 75%
+                        width: 100%
+                        object-fit: cover
+            &-default
+                position: relative
+                background-color: transparent
+                .article-grid
+                    &-permalink
+                        position: absolute
+                        left: 0
+                        right: 0
+                        top: 0
+                        bottom: 0
+                        height: 100%
+                        display: flex
+                        flex-direction: column
+                        padding: 25px
+                        background-color: #fff
+                    &-title
+                        margin: 0
+                        margin-bottom: 5px
+                        color: #262D33
+                        font-family: 'Roboto Slab', serif
+                        font-style: normal
+                        font-weight: bold
+                        font-size: 16px
+                        line-height: 25px
+                    &-excerpt
+                        font-family: 'Lato Black', sans-serif
+                        font-style: normal
+                        font-weight: normal
+                        font-size: 14px
+                        line-height: 20px
+                        color: #4B5157
+                        margin: 0
+                        margin-bottom: 10px
+                        height: 60px
+                        overflow: hidden
+                    &-date
+                        font-family: 'Lato Black', sans-serif
+                        font-style: normal
+                        font-weight: normal
+                        font-size: 12px
+                        line-height: 15px
+                        color: #939699
+@media screen and ( max-width: 1200px )
+    .article
+        &-grid
+            grid-template-columns: repeat(auto-fit, minmax(40%, 1fr))
+@media screen and ( max-width: 1024px  )
+    .article
+        &-grid 
+            margin-right: 20px
+            grid-template-columns: repeat(auto-fit, minmax(40%, 1fr))
+            grid-template-rows: 2fr repeat(2, 1fr)
+            grid-auto-rows: minmax(200px, max-content)
+            grid-gap: 20px
+            &-item
+                &-1
+                    grid-area: 1 / 1 / 2 / 3
+                &-2
+                    grid-area: 2 / 1 / 4 / 2
+                &-3
+                    grid-area: 2 / 2 / 4 / 2
+@media screen and ( max-width: 960px  )
+    .main
+        &-grid
+            flex-wrap: wrap
+    .article
+        &-grid
+            width: 100%
+            margin-right: 0
+            margin-bottom: 20px
+            &-item
+                &-2
+                    img
+                        width: 100%
+@media screen and ( max-width: 768px  )
+    .widget
+        &-social
+            height: 200px
+@media screen and ( max-width: 576px  )
+    .article
+        &-grid
+            &-thumb
+                height: 57%
+            &-item
+                &-1
+                    .article-grid-info
+                        .author
+                            width: 309px
+                &-3
+                    .article-grid-title
+                        margin-top: 276px
+                        font-size: 14px
+                        text-align: center
+                        line-height: 20px
+
+@media screen and ( min-width: 320px) and (max-width: 420px )
+    .article
+        &-grid
+            &-item-1
+                img
+                    display: none  
+                .article-grid-info
+                    flex-wrap: wrap
+                    .author-name
+                        margin-bottom: 10px    
+            &-item
+                &-1
+                    grid-area: 1 / 1 / 2 / 3
+                &-2
+                    grid-area: 2 / 1 / 4 / 3
+                &-3
+                    grid-area: 4 / 1 / 6 / 3 
+                    .article-grid-title
+                        margin-top: 340px   
+                &-default
+                    grid-column: 1 / 3
+
