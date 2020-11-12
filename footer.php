@@ -8,9 +8,20 @@
     <div class="footer-info">
 
     <?php 
+            // проверяем,если ли логотип. Если да-выводим его
+        if(has_custom_logo()) {
+            //  echo '<div class="logo">' . get_custom_logo() .
+            //  '<span class="logo-name">' . get_bloginfo('name') . '</span></div>';
+            echo '<div class="logo">' . get_custom_logo() .
+            '</div>';
+        }else {
+            echo '<span class="logo-name">' . get_bloginfo('name') . '</span>';
+        }
+
         wp_nav_menu( [
             'theme_location'  => 'footer_menu',
             'container'       => 'nav', 
+            'container_class' => 'footer-nav-wrapper',
             'menu_class'      => 'footer-nav', 
             'echo'            => true,
         ] );

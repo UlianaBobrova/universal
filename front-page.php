@@ -169,11 +169,8 @@
                             ?>
             <li class="article-grid-item article-grid-item-1">
                 <a href="<?php echo the_permalink() ?>" class="article-grid-permalink">
-                    <img class="article-grid-thumb" src="<?php if( has_post_thumbnail() ) {
-                        echo get_the_post_thumbnail_url();
-                    } else {
-	                    echo get_template_directory_uri().'./assets/images/image-default.png';
-                    } ?>" alt="">
+                    <img class="article-grid-thumb" src="<?php echo get_template_directory_uri() . '/assets/images/article-card1.png'?>" alt="">
+
                     <span class="category-name"><?php $category = get_the_category(); echo $category[0]->name; ?></span>
                     <h4 class="article-grid-title"><?php echo get_the_title(); ?> </h4>
                     <p class="article-grid-excerpt"><?php echo mb_strimwidth(get_the_excerpt(), 0, 90, '...'); ?></p>
@@ -443,6 +440,7 @@ if ( $query->have_posts() ) {
             ?>
                     <!-- узнаем данные пользователя -->
                     <?php $author_id = get_the_author_meta('ID');?>
+                    <!-- получаем ссылку на автора -->
                     <a href="<?php echo get_author_posts_url($author_id);?>" class="author">
                         <img src="<?php echo get_avatar_url($author_id); ?>" alt="" class="avatar">
                         <div class="author-bio">
@@ -472,7 +470,7 @@ if ( $query->have_posts() ) {
             ?>
             <div class="other">
                 <div class="other-career">
-                    <img src="<?php echo get_template_directory_uri().'./assets/images/career.png';?>" alt="" class="other-career-thumb">
+                    <img src="<?php echo get_template_directory_uri() . '/assets/images/career.png';?>" alt="" class="other-career-thumb">
                     <div class="other-career-info">
                     <?php		
         global $post;

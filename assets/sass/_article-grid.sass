@@ -205,15 +205,19 @@
                         display: flex
                         background-color: #fff
                         padding: 0 25px 30px 25px
+                        display: flex
+                        flex-direction: column
+                        justify-content: flex-end
+                        align-items: center
                     &-title
-                        margin-top: 290px
                         font-family: 'Roboto Slab', serif
                         font-style: normal
                         font-weight: bold
                         font-size: 16px
                         line-height: 25px
                         color: #262D33
-                        margin-bottom: 0
+                        margin: 0
+                        text-align: center
                     &-thumb
                         position: absolute
                         left: 0
@@ -235,6 +239,7 @@
                         height: 100%
                         display: flex
                         flex-direction: column
+                        justify-content: space-between
                         padding: 25px
                         background-color: #fff
                     &-title
@@ -247,7 +252,7 @@
                         font-size: 16px
                         line-height: 25px
                     &-excerpt
-                        font-family: 'Lato Black', sans-serif
+                        font-family: 'Lato Regular', sans-serif
                         font-style: normal
                         font-weight: normal
                         font-size: 14px
@@ -258,7 +263,7 @@
                         height: 60px
                         overflow: hidden
                     &-date
-                        font-family: 'Lato Black', sans-serif
+                        font-family: 'Lato Regular', sans-serif
                         font-style: normal
                         font-weight: normal
                         font-size: 12px
@@ -296,6 +301,7 @@
                 &-2
                     img
                         width: 100%
+
 @media screen and ( max-width: 768px  )
     .widget
         &-social
@@ -311,12 +317,13 @@
                         .author
                             width: 309px
                 &-3
-                    .article-grid-title
-                        margin-top: 276px
-                        font-size: 14px
-                        text-align: center
-                        line-height: 20px
-
+                    .article-grid
+                        &-title
+                            font-size: 14px
+                            text-align: center
+                            line-height: 20px
+                        &-permalink
+                            padding: 0 15px 15px 15px
 @media screen and ( min-width: 320px) and (max-width: 420px )
     .article
         &-grid
@@ -334,8 +341,8 @@
                     grid-area: 2 / 1 / 4 / 3
                 &-3
                     grid-area: 4 / 1 / 6 / 3 
-                    .article-grid-title
-                        margin-top: 340px   
+                    .article-grid-permalink
+                        padding: 0 25px 30px 25px  
                 &-default
                     grid-column: 1 / 3
 

@@ -10,6 +10,7 @@
     overflow: hidden
     border-radius: 10px
     min-height: 570px
+    max-height: 618px
     background-color: #fff
     position: relative
     z-index: 1
@@ -69,8 +70,7 @@
                 max-width: 590px
             &-text
                 position: relative
-                z-index: 2
-        
+                z-index: 2     
     .right
         flex-basis: 25%
     .recommend
@@ -104,6 +104,9 @@
         //         text-transform: uppercase
         //         text-decoration: none
         &-title
+            font-family: 'Lato Regular', sans-serif
+            font-style: normal
+            font-weight: 700
             font-size: 14px
             line-height: 20px
             font-weight: 400
@@ -126,6 +129,8 @@
     &-permalink
         text-decoration: none
         color: #4B5157
+        &:visited
+            color: #4B5157
 .category-link
     // color: #4592FF
     text-transform: uppercase
@@ -147,6 +152,10 @@
     .hero
         .right
             flex-basis: 35%
+@media screen and (max-width: 1024px)
+    .hero
+        min-height: 570px
+        max-height: 100%
 @media screen and ( max-width: 768px )
     .hero
         flex-direction: column

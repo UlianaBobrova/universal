@@ -80,6 +80,18 @@ function universe_theme_widgets_init() {
 			'after_title'   => '',
 		)
 	);
+	// ф-ия регистрирует зоны под виджеты
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Сайдбар на странице контента', 'universe-theme' ),
+			'id'            => 'page-sidebar',
+			'description'   => esc_html__( 'Добавьте текст сюда', 'universe-theme' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '',
+			'after_title'   => '',
+		)
+	);
 }
 add_action( 'widgets_init', 'universe_theme_widgets_init' );
 
@@ -488,7 +500,160 @@ function register_resent_post_widget() {
 }
 add_action( 'widgets_init', 'register_resent_post_widget' );
 
+/**
+ * Добавление нового виджета Resent_Post_Widget.
+ */
+class Recommend_Widget extends WP_Widget {
 
+	// Регистрация виджета используя основной класс
+	function __construct() {
+		// вызов конструктора выглядит так:
+		// __construct( $id_base, $name, $widget_options = array(), $control_options = array() )
+		parent::__construct(
+			'recommend_widget', // ID виджета, если не указать (оставить ''), то ID будет равен названию класса в нижнем регистре: foo_widget
+			'Рекомендованные статьи',
+			array( 'description' => 'Рекомендованные статьи', 'classname' => 'widget-recommend', )
+		);
+
+		// скрипты/стили виджета, только если он активен
+		if ( is_active_widget( false, false, $this->id_base ) || is_customize_preview() ) {
+			add_action('wp_enqueue_scripts', array( $this, 'add_my_widget_scripts' ));
+			add_action('wp_head', array( $this, 'add_my_widget_style' ) );
+		}
+	}
+
+	/**
+	 * Вывод виджета во Фронт-энде
+	 *
+	 * @param array $args     аргументы виджета.
+	 * @param array $instance сохраненные данные из настроек
+	 */
+	function widget( $args, $instance ) {
+        $title = $instance['title'];
+		$count = $instance['count'];
+
+		echo $args['before_widget'];
+		
+        if ( ! empty( $count ) ) {
+			echo '<div class="container">';
+			echo '<div class="widget-recommend-wrapper">';
+				global $post;
+				foreach (get_the_category() as $category) {
+				$cat = get_category_link($category);
+				$query = new WP_Query( [
+					'posts_per_page' => $count,
+					'category_name' => $cat,
+				] );
+				if ( $query->have_posts() ) {
+					while ( $query->have_posts() ) {
+						$query->the_post(); ?>
+							<a class="recommend-permalink" href="<?php echo get_the_permalink(); ?>">
+								<img src="<?php 
+                    //проверяем,есть ли у поста миниатюра
+                    				if( has_post_thumbnail() ) {
+                        				echo get_the_post_thumbnail_url(null, 'thumbnail');
+                    				} else {
+	                    				echo get_template_directory_uri().'./assets/images/image-default.png';
+                    				}
+                    				?>" alt="" class="recommend-item-thumb">
+                            	<h4 class="recommend-title"><?php echo mb_strimwidth(get_the_title(), 0, 60, '...') ?></h4>
+								<div class="recommend-info">
+								<div class="eye">
+                                    <svg fill="#BCBFC2" width="15" height="15" class="icon eye-icon">
+                                        <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#Eye"></use>
+                                    </svg>
+                                    <span class="eye-counter"><?php comments_number('0', '1', '%') ?></span>
+                                </div>
+                                <div class="comments">
+                                    <svg fill="#BCBFC2" width="15" height="15" class="icon comments-icon">
+                                        <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#Comment-icon"></use>
+                                    </svg>
+                                    <span class="comments-counter"><?php comments_number('0', '1', '%') ?></span>
+                                </div>
+                            </div>
+							</a>
+								<?php 
+								}
+							} else {
+								// Постов не найдено
+		};
+	}
+		wp_reset_postdata();
+		echo '</div>';
+		echo '</div>';
+		} 
+	
+		echo $args['after_widget'];
+	}
+
+	/**
+	 * Админ-часть виджета
+	 *
+	 * @param array $instance сохраненные данные из настроек
+	 */
+	function form( $instance ) {
+        $title = @ $instance['title'] ?: 'Рекомендованные статьи';
+		$count = @ $instance['count'] ?: '7';
+		?>
+
+        <p>
+			<label for="<?php echo $this->get_field_id( 'count' ); ?>"><?php _e( 'Количество постов:' ); ?></label> 
+			<input class="widefat" id="<?php echo $this->get_field_id( 'count' ); ?>" name="<?php echo $this->get_field_name( 'count' ); ?>" type="text" value="<?php echo esc_attr( $count ); ?>">
+		</p>
+		<?php 
+	}
+
+	/**
+	 * Сохранение настроек виджета. Здесь данные должны быть очищены и возвращены для сохранения их в базу данных.
+	 *
+	 * @see WP_Widget::update()
+	 *
+	 * @param array $new_instance новые настройки
+	 * @param array $old_instance предыдущие настройки
+	 *
+	 * @return array данные которые будут сохранены
+	 */
+	function update( $new_instance, $old_instance ) {
+        $instance = array();
+        // записываем в массив и очищаем от тегов -strip_tags
+        $instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+		$instance['count'] = ( ! empty( $new_instance['count'] ) ) ? strip_tags( $new_instance['count'] ) : '';
+
+		return $instance;
+	}
+
+	// скрипт виджета
+	function add_my_widget_scripts() {
+		// фильтр чтобы можно было отключить скрипты
+		if( ! apply_filters( 'show_my_widget_script', true, $this->id_base ) )
+			return;
+
+		$theme_url = get_stylesheet_directory_uri();
+
+		wp_enqueue_script('my_widget_script', $theme_url .'/my_widget_script.js' );
+	}
+
+	// стили виджета
+	function add_my_widget_style() {
+		// фильтр чтобы можно было отключить стили
+		if( ! apply_filters( 'show_my_widget_style', true, $this->id_base ) )
+			return;
+		?>
+		<style type="text/css">
+			.recommend_widget a{ display:inline; }
+		</style>
+		<?php
+	}
+
+} 
+// конец класса Social_Widget
+
+// регистрация Resent_Post_Widget в WordPress
+function register_recommend_widget() {
+	register_widget( 'Recommend_Widget' );
+	
+}
+add_action( 'widgets_init', 'register_recommend_widget' );
 
 // подключение стилей Значение time убрать после окончания разработки!!!!!
 function enqueue_universal_style() {
@@ -529,4 +694,15 @@ function delete_intermediate_image_sizes( $sizes ){
 		'1536x1536',
 		'2048x2048',
 	] );
+}
+
+// меняем стиль многоточие в отрывках
+add_filter('excerpt_more', function($more) {
+	return '...';
+});
+
+// склоняем слова после числительных
+function plural_form($number, $after) {
+	$cases = array (2, 0, 1, 1, 1, 2);
+	echo $number.' '.$after[ ($number%100>4 && $number%100<20)? 2: $cases[min($number%10, 5)] ];
 }

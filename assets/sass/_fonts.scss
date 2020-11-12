@@ -4,19 +4,19 @@
     // пробуем подгрузить этот шрифт из кэша пользоваетля
     local("Lato-Black"),
     local("Lato Black"),
-    url("../fonts/LatoBold.woff2") format("woff2"),
-    url("../fonts/Lato-Bold.woff") format("woff");
+    url("../fonts/Lato-Black.woff2") format("woff2"),
+    url("../fonts/Lato-Black.woff") format("woff");
     font-style: normal;
     font-display: swap;       
    }
    @font-face {
-    font-family: "Lato Black";
+    font-family: "Lato Regular";
     src: 
     // пробуем подгрузить этот шрифт из кэша пользоваетля
     local("Lato-Regular"),
     local("Lato Regular"),
-    url("../fonts/LatoRegular.woff2") format("woff2"),
-    url("../fonts/LatoRegular.woff") format("woff");
+    url("../fonts/Lato-Regular.woff2") format("woff2"),
+    url("../fonts/Lato-Regular.woff") format("woff");
     font-style: normal;
     font-display: swap;       
    }
