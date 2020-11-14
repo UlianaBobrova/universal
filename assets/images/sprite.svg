@@ -20,4 +20,7 @@
 <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 17" id="home">
   <path fill-rule="evenodd" clip-rule="evenodd" d="M2 17h5v-6h4v6h5v-7h2L9 0 0 10h2v7z"></path>
 </symbol>
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" id="Pencil">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 14.2V18h3.8l11-11.1L11 3.1 0 14.2zM17.7 4c.4-.4.4-1 0-1.4L15.4.3c-.4-.4-1-.4-1.4 0l-1.8 1.8L16 5.9 17.7 4z"></path>
+  </symbol>
 </svg>

@@ -459,6 +459,8 @@ body {
   background-image: url("../images/arrow.svg");
   background-repeat: no-repeat;
   background-position: 113px center;
+  border: none;
+  cursor: pointer;
 }
 
 .more:visited, .more:focus, .more:hover {
@@ -2925,4 +2927,220 @@ body {
   line-height: 30px;
   margin-top: 30px;
   margin-bottom: 25px;
+}
+
+.comments-area {
+  max-width: 750px;
+}
+
+.comments-title {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 50px;
+}
+
+.comments-count {
+  color: #939699;
+  font-family: 'Lato Regular', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 50px;
+}
+
+.comments-add-button {
+  border: 1px solid #D9DADB;
+  border-radius: 20px;
+  padding: 10px 20px;
+  color: #262D33;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comments-add-button svg {
+  margin-right: 10px;
+  fill: #BCBFC2;
+}
+
+.comments-add-button:visited {
+  color: #262D33;
+}
+
+.comments-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comments-list {
+  margin-left: 0;
+  padding: 0;
+}
+
+.comment a {
+  text-decoration: none;
+}
+
+.comment-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-top: 1px solid #D9DADB;
+  padding-top: 20px;
+  padding-bottom: 29px;
+}
+
+.comment-author .url {
+  color: #262D33;
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 25px;
+  margin-right: 10px;
+}
+
+.comment-author-avatar {
+  margin-right: 15px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-top: 20px;
+}
+
+.comment-author-avatar img {
+  border-radius: 50%;
+}
+
+.comment-meta a {
+  color: #939699;
+  font-family: 'Lato Regular', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.comment-meta a:visited {
+  color: #939699;
+}
+
+.comment-content p {
+  font-family: 'Lato Regular', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: #4B5157;
+}
+
+.comment-reply {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comment-reply svg {
+  margin-right: 5px;
+}
+
+.comment-reply a {
+  color: #262D33;
+  font-family: 'Lato Regular', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.comment-form {
+  background-color: #F5F5F5;
+  border-radius: 10px;
+  padding: 30px 40px 35px 30px;
+}
+
+.comment-form-comment img {
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.comment-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.comment-label {
+  font-family: 'Roboto Slab', serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 25px;
+  color: #262D33;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: 95px;
+}
+
+.comment-textarea {
+  min-height: 130px;
+  max-width: 595px;
+  resize: none;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #D9DADB;
+  padding: 10px;
+}
+
+.comment-textarea:active, .comment-textarea:focus {
+  outline: none;
+}
+
+.comment-textarea-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.comment-textarea-wrapper:before {
+  content: '';
+  background-image: url(../images/angle-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  width: 10px;
+  height: 18px;
+  position: absolute;
+  top: 30px;
+  left: -9px;
+}
+
+.comment-submit {
+  margin-left: 95px;
+  margin-top: 15px;
 }
