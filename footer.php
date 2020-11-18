@@ -1,5 +1,8 @@
 <footer class="footer">
     <div class="container">
+    <?php
+        if(!is_page_template('thankyou.php')){
+            ?>
     <div class="footer-form-wrapper">
     <h3 class="footer-form-title">Подпишитесь на нашу рассылку</h3>
     <form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post" class="footer-form">
@@ -16,6 +19,9 @@
 	    <button type="submit" value="Подписаться">Подписаться</button>
     </form> 
     </div>
+    <?php 
+    }
+    ?>
         <div class="footer-menu-bar">
         <!-- выводим конкретно наш сайдбар -->
             <?php dynamic_sidebar( 'sidebar-footer' ); ?>

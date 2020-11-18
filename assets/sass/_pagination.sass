@@ -1,0 +1,43 @@
+.pagination
+    margin-bottom: 115px
+    .nav-links
+        margin-top: 40px
+        background-color: #fff
+        border-radius: 10px
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-right: 29px
+        *
+            padding: 17px
+            text-decoration: none
+            color: #262D33
+            font-family: 'Lato Black', sans-serif
+            font-style: normal
+            font-size: 14px
+            line-height: 20px
+            text-align: center
+            &:not(:last-child)
+                border-right: 1px solid #D9DADB 
+        .next
+            padding: 17px 70px
+            margin-left: auto
+            flex-grow: 1
+            &:after
+                content: ''
+                width: 15px
+                height: 7px
+                display: inline-block
+                background: url(../images/arrowgrey-next.svg) no-repeat center / 100%
+                margin-left: 8px
+        .prev
+            padding: 17px 70px
+            margin-right: auto
+            flex-grow: 1
+            &:before
+                content: ''
+                width: 15px
+                height: 7px
+                display: inline-block
+                background: url(../images/arrowgrey-back.svg) no-repeat center / 100%
+                margin-right: 8px

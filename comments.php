@@ -114,7 +114,7 @@ if ( post_password_required() ) {
 			<?php
 			echo 'Комментарии ' . '<span class="comments-count">' . get_comments_number() . '</span>'?>
 		</h2><!-- .comments-title -->
-        <a href="#" class="comments-add-button">
+        <a href="#form" class="comments-add-button">
             <svg width="18" height="18" class="icon eye-icon">
                 <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#Pencil"></use>
             </svg>Добавить комментарий</a>
@@ -152,7 +152,7 @@ if ( post_password_required() ) {
 
 	comment_form(array(
         'title_reply' => '',
-		'comment_field' => '<div class="comment-form-comment">
+		'comment_field' => '<div class="comment-form-comment" id="form">
 		<label class="comment-label" for="comment">' . _x( 'Что вы думаете на этот счет?', 'noun' ) . '</label>
 		<div class="comment-wrapper">
 		' . get_avatar( get_current_user_id(), 75) . '
