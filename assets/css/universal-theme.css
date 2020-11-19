@@ -3300,3 +3300,118 @@ body {
   background: url(../images/arrowgrey-back.svg) no-repeat center/100%;
   margin-right: 8px;
 }
+
+.category {
+  background-color: #E5E5E5;
+}
+
+.category-title {
+  font-family: 'Roboto Slab', serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 50px;
+  color: #262D33;
+}
+
+.post-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.post-card {
+  width: 23%;
+  margin-bottom: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.post-card:not(:last-child) {
+  margin-right: 2%;
+}
+
+.post-card-text {
+  padding: 15px 25px 25px 25px;
+}
+
+.post-card-thumb {
+  height: 180px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.post-card-title {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-family: 'Roboto Slab', serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 25px;
+  height: 50px;
+}
+
+.post-card p {
+  font-family: 'Lato Regular', sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4B5157;
+  margin-bottom: 14px;
+}
+
+.post-card .author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post-card .author-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.post-card .author-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 10px;
+  color: #939699;
+}
+
+.post-card .author-info svg {
+  fill: #BCBFC2;
+}
+
+.post-card .author-name {
+  width: 100%;
+  color: #4b5157;
+}
+
+.post-card .comments, .post-card .likes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10px;
+}
+
+.post-card .comments span, .post-card .likes span {
+  margin-left: 5px;
+}
