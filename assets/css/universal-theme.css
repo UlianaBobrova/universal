@@ -2573,6 +2573,21 @@ body {
   .footer-text-wrapper .textwidget {
     text-align: center;
   }
+  .footer-form-wrapper form {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer-form-wrapper form input {
+    margin-right: 0;
+    margin-bottom: 10px;
+    min-width: 100%;
+  }
+  .footer-form-title {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 420px) {
@@ -2600,6 +2615,10 @@ body {
   }
   .footer-text-wrapper .textwidget {
     width: 100%;
+  }
+  .footer-form-title {
+    text-align: start;
+    font-size: 35px;
   }
 }
 
@@ -3414,4 +3433,67 @@ body {
 
 .post-card .comments span, .post-card .likes span {
   margin-left: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+  .post-card-text {
+    padding: 15px;
+  }
+  .post-card .author-info .date {
+    width: 100%;
+  }
+  .post-card .comments {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .post-card {
+    width: 31%;
+  }
+  .post-card:not(:last-child) {
+    margin-right: 0;
+  }
+  .post-card-text {
+    padding: 15px;
+  }
+  .post-card .author-avatar {
+    margin-bottom: 10px;
+  }
+  .post-card .author-info {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .post-card-text p {
+    min-height: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .post-card {
+    width: 48%;
+  }
+  .post-card-text .author {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 420px) {
+  .post-card {
+    width: 100%;
+  }
+  .post-card .author .date {
+    width: 30%;
+  }
+  .post-card-title {
+    height: 30px;
+  }
+  .post-card-text p {
+    min-height: 60px;
+  }
 }

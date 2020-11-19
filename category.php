@@ -15,7 +15,7 @@
                     }
                     ?>" alt="" class="post-card-thumb">
         <div class="post-card-text">
-        <h2 class="post-card-title"><?php echo mb_strimwidth(get_the_title(), 0, 33, '...'); ?></h2>
+        <h2 class="post-card-title"><?php echo mb_strimwidth(get_the_title(), 0, 28, '...'); ?></h2>
         <p><?php echo mb_strimwidth(get_the_excerpt(), 0, 75, '...'); ?></p>
         <div class="author">
             <?php $author_id = get_the_author_meta('ID');?>
