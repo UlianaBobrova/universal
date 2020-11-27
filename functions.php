@@ -670,7 +670,41 @@ function enqueue_universal_style() {
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_universal_style' );
 
+// Отправка формы посредством AJAX
+add_action( 'wp_enqueue_scripts', 'adminAjax_data', 99 );
+function adminAjax_data(){
+	wp_localize_script( 'jquery', 'adminAjax', 
+		array(
+			'url' => admin_url('admin-ajax.php')
+		)
+	);  
 
+}
+// обработчик формы
+add_action('wp_ajax_contacts_form', 'ajax_form');
+add_action('wp_ajax_nopriv_contacts_form', 'my_action_callback');
+function ajax_form() {
+	//с помощью post-запроса беру имя,которое передалось. contact_name - name из input
+	$contact_name = $_POST['contact_name'];
+	$contact_email = $_POST['contact_email'];
+	$contact_comment = $_POST['contact_comment'];
+	$message = 'Пользователь оставил свои данные: ' . $contact_name;
+	// $headers = 'From: webmaster@example.com' . "\r\n" .
+    // 'Reply-To: webmaster@example.com' . "\r\n" .
+    // 'X-Mailer: PHP/' . phpversion();
+	// $message = 'Пользователь ' . $contact_name . 'задал вопрос: ' . $contact_comment . '. Его email: ' . $contact_email;
+	// mail('uliana.bobrova@gmail.com', 'Новая заявка', $message, $headers );
+
+	$headers = 'From: Uliana <uliana.bobrova@gmail.com>' . "\r\n";
+	$sent_message = wp_mail('uliana.bobrova@gmail.com', 'Новая заявка с сайта', $message, $headers);
+	if ($sent_message) {
+		echo 'Все получилось';
+	}else {
+		echo 'Где-то есть ошибка';
+	}
+	// выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
+	wp_die();
+}
 ## фильтр для облака тэгов, изменяем настройки облака тэгов
 add_filter( 'widget_tag_cloud_args', 'edit_widget_tag_cloud_args');
 function edit_widget_tag_cloud_args($args) {

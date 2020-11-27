@@ -11,7 +11,7 @@
                     if( has_post_thumbnail() ) {
                         echo get_the_post_thumbnail_url();
                     } else {
-	                    echo get_template_directory_uri().'./assets/images/image-default.png';
+	                    echo get_template_directory_uri() . '/assets/images/image-default.png';
                     }
                     ?>" alt="" class="post-card-thumb">
         <div class="post-card-text">

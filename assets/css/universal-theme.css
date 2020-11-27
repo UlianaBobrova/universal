@@ -1645,9 +1645,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -1691,6 +1688,7 @@ body {
      object-fit: cover;
   margin-right: 25px;
   height: 224px;
+  width: 336px;
 }
 
 .option-grid .news-item-right {
@@ -3339,9 +3337,6 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .post-card {
@@ -3496,4 +3491,106 @@ body {
   .post-card-text p {
     min-height: 60px;
   }
+}
+
+.section-dark {
+  background: #262D33;
+  color: #ffffff;
+  padding: 50px 122px;
+}
+
+.page-title {
+  font-family: 'Roboto Slab', serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 50px;
+  margin-top: 0;
+  margin-bottom: 27px;
+}
+
+.page-text {
+  font-family: 'Lato Regular', sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.contacts-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.contacts-form {
+  max-width: 460px;
+}
+
+.contacts-form input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #939699;
+  margin-bottom: 10px;
+}
+
+.contacts-form textarea {
+  width: 100%;
+  min-height: 120px;
+  resize: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #939699;
+  margin-bottom: 20px;
+}
+
+.wpcf7-form {
+  max-width: 460px;
+}
+
+.wpcf7-form input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #939699;
+  margin-bottom: 10px;
+}
+
+.wpcf7-form input[type=submit] {
+  display: inline-block;
+  color: #ffffff;
+  padding: 10px 20px;
+  padding-right: 50px;
+  border-radius: 20px;
+  background: #4592ff;
+  text-decoration: none;
+  background-image: url("../images/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 113px center;
+  border: none;
+  cursor: pointer;
+  width: 148px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.wpcf7-form input[type=submit]:visited, .wpcf7-form input[type=submit]:focus, .wpcf7-form input[type=submit]:hover {
+  color: #fff;
+}
+
+.wpcf7-form textarea {
+  width: 100%;
+  min-height: 120px;
+  resize: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #939699;
+  margin-bottom: 20px;
 }

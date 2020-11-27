@@ -2,7 +2,7 @@
 get_header();
 ?>
 <div class="container">
-<h1 class="search-title">Результаты поиска по запросу:</h1>
+<h1 class="search-title">Результаты поиска по запросу: <?php the_search_query(); ?> </h1>
 <div class="option-grid">
 <div class="option-grid__wrapper">
 <div class="news-grid__wrapper">
