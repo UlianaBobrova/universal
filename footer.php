@@ -68,7 +68,10 @@
     <!-- ./footer-info -->
     <div class="footer-text-wrapper">
         <?php dynamic_sidebar( 'sidebar-footer-text' ); ?>
-        <span class="footer-copyright"><?php echo '&copy;  ' . date('Y  ') . get_bloginfo('  name');?></span>
+        <span class="footer-copyright"><?php     
+        //выводим поля ACF
+        the_field('phone'); 
+        echo '  &copy;  ' . date('Y  ') . get_bloginfo('  name');?></span>
         <!-- /.footer-copyright -->
     </div>
     <!-- /.footer-text-wrapper -->
