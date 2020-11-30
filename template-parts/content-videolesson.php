@@ -1,6 +1,6 @@
 <article id="videolesson-<?php the_ID(); ?>" <?php post_class(); ?>>
     <!-- шапка поста -->
-    <header class="entry-header <?php echo get_post_type()?>-header" style="background: linear-gradient(0deg, rgba(38, 45, 51, 0.75), rgba(38, 45, 51, 0.75)) ">
+    <header class="entry-header <?php echo get_post_type()?>-header" style="background: linear-gradient(0deg, rgba(38, 45, 51, 0.75), rgba(38, 45, 51, 0.75)), url(<?php the_field('thumbnail');?>) 100%/cover no-repeat">
         <div class="container">
             <div class="videolesson-header-wrapper">
                 <div class="videolesson-header-nav">
