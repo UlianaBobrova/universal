@@ -41,6 +41,7 @@ if (!function_exists('universal_theme_setup')) :
 		],
 		'description'         => 'Раздел с видеоуроками',
 		'public'              => true,
+		'show_admin_column'   => true,
 		// 'publicly_queryable'  => null, // зависит от public
 		// 'exclude_from_search' => null, // зависит от public
 		// 'show_ui'             => null, // зависит от public
@@ -55,12 +56,70 @@ if (!function_exists('universal_theme_setup')) :
 		//'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
 		//'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
 		'hierarchical'        => false,
-		'supports'            => [ 'title', 'editor', 'thumbnail', 'custom-fields' ], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+		'supports'            => [ 'title', 'editor', 'thumbnail', 'custom-fields', 'excerpt', 'custom-fields', 'author' ], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
 		'taxonomies'          => [],
 		'has_archive'         => true,
 		'rewrite'             => true,
 		'query_var'           => true,
 	] );
+}
+
+// хук, через который подключается функция
+// регистрирующая новые таксономии (create_book_taxonomies)
+add_action( 'init', 'create_videolesson_taxonomies' );
+
+// функция, создающая 2 новые таксономии "genres" и "writers" для постов типа "book"
+function create_videolesson_taxonomies(){
+
+	// Добавляем древовидную таксономию 'genre' (как категории)
+	register_taxonomy('type', array('videolesson'), array(
+		'hierarchical'  => true,
+		'labels'        => array(
+			'name'              => _x( 'Type', 'taxonomy general name' ),
+			'singular_name'     => _x( 'Type', 'taxonomy singular name' ),
+			'search_items'      =>  __( 'Search Type' ),
+			'all_items'         => __( 'All Type' ),
+			'parent_item'       => __( 'Parent Type' ),
+			'parent_item_colon' => __( 'Parent Type:' ),
+			'edit_item'         => __( 'Edit Type' ),
+			'update_item'       => __( 'Update Type' ),
+			'add_new_item'      => __( 'Add New Type' ),
+			'new_item_name'     => __( 'New Type Name' ),
+			'menu_name'         => __( 'Type' ),
+		),
+		// показывать ли это в меню
+		'show_ui'       => true,
+		'query_var'     => true,
+		'rewrite'       => array( 'slug' => 'type' ), // свой слаг в URL
+		'show_admin_column' => true,
+	));
+
+	// Добавляем НЕ древовидную таксономию 'writer' (как метки)
+	register_taxonomy('teacher', 'videolesson',array(
+		'hierarchical'  => false,
+		'labels'        => array(
+			'name'                        => _x( 'Teacher', 'taxonomy general name' ),
+			'singular_name'               => _x( 'Teacher', 'taxonomy singular name' ),
+			'search_items'                =>  __( 'Search Teachers' ),
+			'popular_items'               => __( 'Popular Teachers' ),
+			'all_items'                   => __( 'All Teachers' ),
+			'parent_item'                 => null,
+			'parent_item_colon'           => null,
+			'edit_item'                   => __( 'Edit Teacher' ),
+			'update_item'                 => __( 'Update Teacher' ),
+			'add_new_item'                => __( 'Add New Teacher' ),
+			'new_item_name'               => __( 'New Teacher Name' ),
+			'separate_items_with_commas'  => __( 'Separate Teacher with commas' ),
+			'add_or_remove_items'         => __( 'Add or remove teacher' ),
+			'choose_from_most_used'       => __( 'Choose from the most used teachers' ),
+			'menu_name'                   => __( 'Teachers' ),
+		),
+		'show_ui'       => true,
+		'query_var'     => true,
+		'rewrite'       => array( 'slug' => 'teacher' ), // свой слаг в URL
+		'show_admin_column' => true,
+	));
+	// Добавляем древовидную таксономию 'genre' (как категории)
 }
    }
 endif;

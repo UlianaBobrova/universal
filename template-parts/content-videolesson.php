@@ -95,12 +95,17 @@
         <!-- подвал сайта -->
         <footer class="post-footer">
         <div class="container">
-            <?php 
-                $tags_list = get_the_tag_list( '', esc_html_x( ' ', 'list item separator', 'universe-example' ) );
-			    if ( $tags_list ) {
-				/* translators: 1: list of tags. */
-				    printf( '<span class="tags-links">' . esc_html__( '%1$s', 'universe-example' ) . '</span>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-                }
+        <?php
+                    $terms = get_terms( 'type' );
+
+                    if( $terms && ! is_wp_error($terms) ){
+                        foreach( $terms as $term ){
+                            printf(
+                                '<a href="%s" class="type-link">%s</a>',
+                                esc_url(get_category_link($term)),
+                                esc_html( $term -> name),
+                            );}
+                        }
                 // ссылки на соцсети
                 meks_ess_share(); ?>
                 </div>
