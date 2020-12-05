@@ -3729,3 +3729,28 @@ body {
 body {
   background-color: #f5f5f5;
 }
+
+.breadcrumbs {
+  margin-top: 50px;
+  color: #262D33;
+}
+
+.breadcrumbs__link, .breadcrumbs__current {
+  text-decoration: none;
+  color: inherit;
+  font-family: 'Lato Regular', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: capitalize;
+}
+
+.breadcrumbs__link:visited, .breadcrumbs__current:visited {
+  color: inherit;
+}
+
+.breadcrumbs__separator {
+  margin-left: 10px;
+  margin-right: 10px;
+}
