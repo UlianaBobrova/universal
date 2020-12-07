@@ -42,9 +42,9 @@
         </div>
         </a>
         <?php } ?>
-        <?php if ( ! have_posts() ){ ?>
-	        Записей нет.
-        <?php } ?>
+        <?php if ( ! have_posts() ){ 
+	         _e('No entries', 'universal') ;
+        } ?>
    </div>
 </div>
 <?php get_footer();?>

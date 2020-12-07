@@ -21,7 +21,7 @@
 			?>
                     <!-- ссылка на главную -->
                     <a class="home-link" href="<?php echo get_home_url(); ?>">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/images/home.svg'?>"> На главную
+                        <img src="<?php echo get_template_directory_uri() . '/assets/images/home.svg'?>"> <?php  _e('Main page', 'universal') ;?>
                     </a>
                     <?php
 			// выводим ссылки на предыдущий и следующий посты
@@ -29,8 +29,8 @@
 				array(
 					'prev_text' => '<span class="post-nav-prev">
 					<img class="prev-icon" src="' . get_template_directory_uri() . '/assets/images/arrow-back.svg">
-					' . esc_html__( 'Назад', 'universe-example' ) . '</span>',
-					'next_text' => '<span class="post-nav-next">' . esc_html__( 'Вперед', 'universe-example' ) . '
+					' . esc_html__( 'Back', 'universal' ) . '</span>',
+					'next_text' => '<span class="post-nav-next">' . esc_html__( 'Next', 'universal' ) . '
 					<img class="next-icon" src="' . get_template_directory_uri() . '/assets/images/arrow-next.svg">
 					</span>',
 				)
@@ -82,7 +82,7 @@
                         <?php $author_id = get_the_author_meta('ID');?>
                             <img src="<?php echo get_avatar_url($author_id); ?>" alt="" class="post-author-avatar">
                                 <span class="post-author-name"><?php the_author(); ?></span>
-                                <span class="post-author-rank">Должность</span>
+                                <span class="post-author-rank"><?php  _e('Position', 'universal') ;?></span>
                                 <span class="post-author-posts">
                                 <?php plural_form(count_user_posts($author_id), 
                                 // варианты написания для количества 1,2 и 5
@@ -90,7 +90,7 @@
                                 ?></span>
                         </div>
                         <!-- /.post-author-info -->
-                        <a href="<?php echo get_author_posts_url($author_id);?>" class="post-author-link">Страница автора</a>
+                        <a href="<?php echo get_author_posts_url($author_id);?>" class="post-author-link"><?php  _e('Author page', 'universal') ;?></a>
                     </div>
                     <!-- /.post-author -->
                 </div>

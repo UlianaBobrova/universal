@@ -112,12 +112,12 @@ if ( post_password_required() ) {
         <div class="comments-header">
 		<h2 class="comments-title">
 			<?php
-			echo 'Комментарии ' . '<span class="comments-count">' . get_comments_number() . '</span>'?>
+			echo  _e('Comments ', 'universal') . '<span class="comments-count">' . get_comments_number() . '</span>'?>
 		</h2><!-- .comments-title -->
         <a href="#form" class="comments-add-button">
             <svg width="18" height="18" class="icon eye-icon">
                 <use xlink:href="<?php echo get_template_directory_uri()?>/assets/images/sprite.svg#Pencil"></use>
-            </svg>Добавить комментарий</a>
+            </svg><?php  _e('Add comment', 'universal') ;?></a>
         </div>
 <!-- навигация на предыдущие и на следующие страницы с комментариями -->
 		<?php the_comments_navigation(); ?>
@@ -132,7 +132,7 @@ if ( post_password_required() ) {
                     'short_ping' => true,
                     'avatar_size' => 75,
                     'callback' => 'universal_theme_comment',
-                    'login_text' => 'Зарегистрируйтесь, чтобы оставить комментарий',
+                    'login_text' =>  _e('Register to leave comment', 'universal'),
 				)
 			);
 			?>
@@ -153,7 +153,7 @@ if ( post_password_required() ) {
 	comment_form(array(
         'title_reply' => '',
 		'comment_field' => '<div class="comment-form-comment" id="form">
-		<label class="comment-label" for="comment">' . _x( 'Что вы думаете на этот счет?', 'noun' ) . '</label>
+		<label class="comment-label" for="comment">' . _x( 'What do you think about it?', 'noun', 'universal' ) . '</label>
 		<div class="comment-wrapper">
 		' . get_avatar( get_current_user_id(), 75) . '
 		<div class="comment-textarea-wrapper">
@@ -170,7 +170,7 @@ if ( post_password_required() ) {
 		( $req ?  : '' ) . '
 		</p>',
 		'class_submit'         => 'comment-submit more',
-		'label_submit' => 'Отправить',
+		'label_submit' =>  _e('No entries', 'universal'),
 		'submit_button'        => '<button name="%1$s" type="submit" id="%2$s" class="%3$s">%4$s</button>',
     ));
 	?>

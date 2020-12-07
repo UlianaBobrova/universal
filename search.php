@@ -2,7 +2,7 @@
 get_header();
 ?>
 <div class="container">
-<h1 class="search-title">Результаты поиска по запросу: <?php the_search_query(); ?> </h1>
+<h1 class="search-title"><?php _e('Search result: ', 'universal')?><?php the_search_query(); ?> </h1>
 <div class="option-grid">
 <div class="option-grid__wrapper">
 <div class="news-grid__wrapper">
@@ -57,13 +57,13 @@ get_header();
                 </li>
     <?php } ?>
     <?php if ( ! have_posts() ){ ?>
-	    Записей нет.
+	    <?php _e('No entries', 'universal')?>
     <?php } ?>
 </ul>
 <?php 
 $args = array (
-    'prev_text'    => __('Назад'),
-	'next_text'    => __('Вперед'),
+    'prev_text'    => __('Back', 'universal'),
+	'next_text'    => __('Next', 'universal'),
 );
 the_posts_pagination( $args )?>
 </div>

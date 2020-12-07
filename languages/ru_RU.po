@@ -1,0 +1,446 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: universal\n"
+"POT-Creation-Date: 2020-12-07 09:27+0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: My Super Team\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;"
+"_nx_noop:1,2,3c;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+
+#: category.php:45 comments.php:173 search.php:60 taxonomy-teacher.php:26
+#: taxonomy-type.php:46
+msgid "No entries"
+msgstr "Нет записей"
+
+#: comments.php:50
+#, php-format
+msgid "<cite class=\"fn\">%s</cite>"
+msgstr ""
+
+#: comments.php:59
+#, php-format
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: comments.php:65
+msgid "(Edit)"
+msgstr ""
+
+#: comments.php:71
+msgid "Your comment is awaiting moderation."
+msgstr "Ваш комментарий на модерации."
+
+#: comments.php:115
+msgid "Comments "
+msgstr "Комментарии "
+
+#: comments.php:120
+msgid "Add comment"
+msgstr "Добавить коммнентарий"
+
+#: comments.php:135
+msgid "Register to leave comment"
+msgstr "Зарегистрируйтесь, чтобы оставлять комментарии"
+
+#: comments.php:147
+msgid "Comments are closed."
+msgstr "Комментарии закрыты."
+
+#: comments.php:156
+msgctxt "noun"
+msgid "What do you think about it?"
+msgstr "Что вы думаете об этом?"
+
+#: comments.php:165
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: comments.php:169
+msgid "Your email address will not be published."
+msgstr "Ваш email не будет опубликован."
+
+#: footer.php:7
+msgid "Subscribe to our newsletter"
+msgstr "Подпишитесь на нашу рассылку"
+
+#: footer.php:10
+msgid "Enter e-mail"
+msgstr "Введите e-mail"
+
+#: footer.php:19
+msgid "Subscribe"
+msgstr "Описание"
+
+#: front-page.php:29 front-page.php:448 template-parts/content-post.php:85
+msgid "Position"
+msgstr "Должность"
+
+#: front-page.php:46 front-page.php:304 front-page.php:500
+msgid "Read more"
+msgstr "Читать далее"
+
+#: front-page.php:52 front-page.php:96 front-page.php:136 front-page.php:273
+#: front-page.php:386 front-page.php:467 front-page.php:505 front-page.php:534
+#: videolessons.php:65
+msgid "No posts"
+msgstr "Нет постов"
+
+#: front-page.php:59
+msgid "Recommend"
+msgstr "Рукомендуем"
+
+#: front-page.php:458
+msgid "Look photo"
+msgstr "Смотреть фото"
+
+#: functions.php:24
+msgid "Header menu"
+msgstr "Меню в шапке"
+
+#: functions.php:25 functions.php:386
+msgid "Footer menu"
+msgstr "Меню в подвале"
+
+#: functions.php:33 functions.php:44
+msgid "Videolessons"
+msgstr "Видеоуроки"
+
+#: functions.php:34
+msgid "Videolesson"
+msgstr "Видеоурок"
+
+#: functions.php:35
+msgid "Add videolesson"
+msgstr "Добавить видеоурок"
+
+#: functions.php:36
+msgid "Add new videolesson"
+msgstr "Добавить новый  видеоурок"
+
+#: functions.php:37
+msgid "Edit videolesson"
+msgstr "Редактировать видеоурок"
+
+#: functions.php:38
+msgid "New videolesson"
+msgstr "Новый видеоурок"
+
+#: functions.php:39
+msgid "View videolesson"
+msgstr "Посмотреть Видеоурок"
+
+#: functions.php:40
+msgid "Search videolesson"
+msgstr "Найти видеоурок"
+
+#: functions.php:41
+msgid "Not found"
+msgstr "Не найдено"
+
+#: functions.php:42
+msgid "Not found in trash"
+msgstr "Не найдено  в корзине"
+
+#: functions.php:46
+msgid "Part with videolesson"
+msgstr "Часть видеоурока"
+
+#: functions.php:82
+msgctxt "taxonomy general name"
+msgid "Type"
+msgstr "Тип"
+
+#: functions.php:83
+msgctxt "taxonomy singular name"
+msgid "Type"
+msgstr "Тип"
+
+#: functions.php:84
+msgid "Search Type"
+msgstr "Тип поиска"
+
+#: functions.php:85
+msgid "All Type"
+msgstr "Все типы"
+
+#: functions.php:86
+msgid "Parent Type"
+msgstr "Тип родителя"
+
+#: functions.php:87
+msgid "Parent Type:"
+msgstr "Тип родителя:"
+
+#: functions.php:88
+msgid "Edit Type"
+msgstr "Редактировать тип"
+
+#: functions.php:89
+msgid "Update Type"
+msgstr "Обновить тип"
+
+#: functions.php:90
+msgid "Add New Type"
+msgstr "Добавить новый тип"
+
+#: functions.php:91
+msgid "New Type Name"
+msgstr "Новое имя типа"
+
+#: functions.php:92
+msgid "Type"
+msgstr "Тип"
+
+#: functions.php:105
+msgctxt "taxonomy general name"
+msgid "Teacher"
+msgstr "Преподаватель"
+
+#: functions.php:106
+msgctxt "taxonomy singular name"
+msgid "Teacher"
+msgstr "Преподаватель"
+
+#: functions.php:107
+msgid "Search Teachers"
+msgstr "Поиск преподавателя"
+
+#: functions.php:108
+msgid "Popular Teachers"
+msgstr "Популярный преподаватель"
+
+#: functions.php:109
+msgid "All Teachers"
+msgstr "Все преподаватели"
+
+#: functions.php:112
+msgid "Edit Teacher"
+msgstr "Редактировать преподавателя"
+
+#: functions.php:113
+msgid "Update Teacher"
+msgstr "Обновить преподавателя"
+
+#: functions.php:114
+msgid "Add New Teacher"
+msgstr "Добавить нового преподавателя"
+
+#: functions.php:115
+msgid "New Teacher Name"
+msgstr "Новое имя преподавателя"
+
+#: functions.php:116
+msgid "Separate Teacher with commas"
+msgstr "Разделить преподавателей по сообщениям"
+
+#: functions.php:117
+msgid "Add or remove teacher"
+msgstr "Добавить или удалить преподавателя"
+
+#: functions.php:118
+msgid "Choose from the most used teachers"
+msgstr "Выбрать из  популярных преподавателей"
+
+#: functions.php:119
+msgid "Teachers"
+msgstr "Преподаватели"
+
+#: functions.php:137
+msgid "Main"
+msgstr "На главную"
+
+#: functions.php:139
+#, php-format
+msgid "Results of search %s"
+msgstr "Результат поиска %s"
+
+#: functions.php:140
+#, php-format
+msgid "Entries with tag \"%s\""
+msgstr "Записи с тегом \"%s\""
+
+#: functions.php:141
+#, php-format
+msgid "Author articles %s"
+msgstr "Страница автора %s"
+
+#: functions.php:142
+msgid "Error 404"
+msgstr "Ошибка 404"
+
+#: functions.php:143
+#, php-format
+msgid "Page %s"
+msgstr "Страница %s"
+
+#: functions.php:144
+#, php-format
+msgid "Comments page %s"
+msgstr "Страница с комментариями %s"
+
+#: functions.php:362
+msgid "Sidebar in front page"
+msgstr "Сайдбар на главной странице"
+
+#: functions.php:364 functions.php:376 functions.php:388 functions.php:400
+#: functions.php:412
+msgid "Add widget here"
+msgstr "Добавьте виджеты сюда"
+
+#: functions.php:374
+msgid "Sidebar with news"
+msgstr "Сайдбар с последними новостями"
+
+#: functions.php:398
+msgid "Footer text"
+msgstr "Текст в подвале"
+
+#: functions.php:410
+msgid "Sidebar content page"
+msgstr "Сайдбар на странице контента"
+
+#: functions.php:433 functions.php:475 functions.php:552 functions.php:602
+msgid "Useful files"
+msgstr "Полезные файлы"
+
+#: functions.php:434
+msgid "Downloading files"
+msgstr "Файлы для скачивания"
+
+#: functions.php:464
+msgid "Download"
+msgstr "Скачать"
+
+#: functions.php:476
+msgid "Description"
+msgstr "Описание"
+
+#: functions.php:481
+msgid "Title: "
+msgstr "Заголовок "
+
+#: functions.php:485
+msgid "Description: "
+msgstr "Описание "
+
+#: functions.php:489
+msgid "Downloading link: "
+msgstr "Ссылка для скачивания "
+
+#: functions.php:553
+msgid "Social networks"
+msgstr "Социальные сети"
+
+#: functions.php:608
+msgid "Title "
+msgstr "Заголовок "
+
+#: functions.php:612
+msgid "Facebook link: "
+msgstr "Ссылка на Facebook "
+
+#: functions.php:616
+msgid "Twitter link: "
+msgstr "Ссылка на Twitter "
+
+#: functions.php:620
+msgid "Youtube link: "
+msgstr "Ссылка на Youtube "
+
+#: functions.php:696
+msgid "Resently published"
+msgstr "Недавно опубликовано"
+
+#: functions.php:697
+msgid "New posts"
+msgstr "Новые посты"
+
+#: functions.php:737
+msgid " ago"
+msgstr " назад"
+
+#: functions.php:760
+msgid "Recently published"
+msgstr "Недавно опубликовано"
+
+#: functions.php:764
+msgid "Title:"
+msgstr "Заголовок:"
+
+#: functions.php:768 functions.php:923
+msgid "Number of posts:"
+msgstr "Число постов:"
+
+#: functions.php:838 functions.php:918
+msgid "Recommend articles"
+msgstr "Реклмендованные статьи"
+
+#: functions.php:1014
+msgid "User left their data: "
+msgstr "Пользователь оставил свои контактные данные: "
+
+#: search.php:5
+msgid "Search result: "
+msgstr "Результат поиска: "
+
+#: search.php:65 template-parts/content-post.php:32
+msgid "Back"
+msgstr "Назад"
+
+#: search.php:66 template-parts/content-post.php:33
+msgid "Next"
+msgstr "Вперед"
+
+#: searchform.php:2
+msgid "Search"
+msgstr "Поиск"
+
+#: template-parts/content-post.php:24
+msgid "Main page"
+msgstr "На главную"
+
+#: template-parts/content-post.php:93
+msgid "Author page"
+msgstr "Страница автора"
+
+#: template-parts/content-post.php:112
+#: template-parts/content-videolesson.php:73
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/content-post.php:126
+#: template-parts/content-videolesson.php:87
+msgid "Pages:"
+msgstr "Страницы:"
+
+#: template-parts/content-post.php:140
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#~ msgid "Director"
+#~ msgstr "Должность"
+
+#~ msgid "position"
+#~ msgstr "Должность"
+
+#~ msgid "Page of comment "
+#~ msgstr "Страница с комментарием "
+
+#, php-format
+#~ msgid "Page \"%s\" "
+#~ msgstr "Страницы \"%s\"  "

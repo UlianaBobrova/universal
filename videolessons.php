@@ -62,7 +62,7 @@ if ( $query->have_posts() ) {
 	            }
             } else {
                 // Постов не найдено
-                ?> <p>Постов нет</p> <?php
+                ?> <p><?php _e('No posts', 'universal')?></p> <?php
             }
             wp_reset_postdata(); // Сбрасываем $post
             ?>

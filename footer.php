@@ -4,10 +4,10 @@
         if(!is_page_template('thankyou.php')){
             ?>
     <div class="footer-form-wrapper">
-    <h3 class="footer-form-title">Подпишитесь на нашу рассылку</h3>
+    <h3 class="footer-form-title"><?php _e('Subscribe to our newsletter', 'universal') ?></h3>
     <form action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post" class="footer-form">
 	<!-- Поле Email (обязательно) -->
-	<input type="text" name="email" placeholder="Введите email" class="input footer-form-input"/>
+	<input type="text" name="email" placeholder="<?php _e('Enter e-mail', 'universal')?>" class="input footer-form-input"/>
 	<!-- Токен списка -->
 	<!-- Получить API ID на: https://app.getresponse.com/campaign_list.html -->
 	    <input required type="hidden" name="campaign_token" value="Bey6M" />
@@ -16,7 +16,7 @@
 	<!-- Добавить подписчика в цикл на определенный день (по желанию) -->
 	    <input type="hidden" name="start_day" value="0" />
 	<!-- Кнопка подписаться -->
-	    <button type="submit" value="Подписаться">Подписаться</button>
+	    <button type="submit" value="Подписаться"><?php _e('Subscribe', 'universal')?></button>
     </form> 
     </div>
     <?php 
