@@ -3734,7 +3734,7 @@ body {
   color: #262D33;
 }
 
-.breadcrumbs__link, .breadcrumbs__current {
+.breadcrumbs__link, .breadcrumbs__current, .breadcrumbs__category {
   text-decoration: none;
   color: inherit;
   font-family: 'Lato Regular', sans-serif;
@@ -3745,7 +3745,7 @@ body {
   text-transform: capitalize;
 }
 
-.breadcrumbs__link:visited, .breadcrumbs__current:visited {
+.breadcrumbs__link:visited, .breadcrumbs__current:visited, .breadcrumbs__category:visited {
   color: inherit;
 }
 

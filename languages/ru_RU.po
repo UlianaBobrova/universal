@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: universal\n"
-"POT-Creation-Date: 2020-12-07 09:27+0300\n"
+"POT-Creation-Date: 2020-12-07 20:53+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: My Super Team\n"
@@ -110,7 +110,7 @@ msgstr "Смотреть фото"
 msgid "Header menu"
 msgstr "Меню в шапке"
 
-#: functions.php:25 functions.php:386
+#: functions.php:25 functions.php:387
 msgid "Footer menu"
 msgstr "Меню в подвале"
 
@@ -291,104 +291,108 @@ msgstr "Страница %s"
 msgid "Comments page %s"
 msgstr "Страница с комментариями %s"
 
-#: functions.php:362
+#: functions.php:145
+msgid "Category"
+msgstr "Категория"
+
+#: functions.php:363
 msgid "Sidebar in front page"
 msgstr "Сайдбар на главной странице"
 
-#: functions.php:364 functions.php:376 functions.php:388 functions.php:400
-#: functions.php:412
+#: functions.php:365 functions.php:377 functions.php:389 functions.php:401
+#: functions.php:413
 msgid "Add widget here"
 msgstr "Добавьте виджеты сюда"
 
-#: functions.php:374
+#: functions.php:375
 msgid "Sidebar with news"
 msgstr "Сайдбар с последними новостями"
 
-#: functions.php:398
+#: functions.php:399
 msgid "Footer text"
 msgstr "Текст в подвале"
 
-#: functions.php:410
+#: functions.php:411
 msgid "Sidebar content page"
 msgstr "Сайдбар на странице контента"
 
-#: functions.php:433 functions.php:475 functions.php:552 functions.php:602
+#: functions.php:434 functions.php:476 functions.php:553 functions.php:603
 msgid "Useful files"
 msgstr "Полезные файлы"
 
-#: functions.php:434
+#: functions.php:435
 msgid "Downloading files"
 msgstr "Файлы для скачивания"
 
-#: functions.php:464
+#: functions.php:465
 msgid "Download"
 msgstr "Скачать"
 
-#: functions.php:476
+#: functions.php:477
 msgid "Description"
 msgstr "Описание"
 
-#: functions.php:481
+#: functions.php:482
 msgid "Title: "
 msgstr "Заголовок "
 
-#: functions.php:485
+#: functions.php:486
 msgid "Description: "
 msgstr "Описание "
 
-#: functions.php:489
+#: functions.php:490
 msgid "Downloading link: "
 msgstr "Ссылка для скачивания "
 
-#: functions.php:553
+#: functions.php:554
 msgid "Social networks"
 msgstr "Социальные сети"
 
-#: functions.php:608
+#: functions.php:609
 msgid "Title "
 msgstr "Заголовок "
 
-#: functions.php:612
+#: functions.php:613
 msgid "Facebook link: "
 msgstr "Ссылка на Facebook "
 
-#: functions.php:616
+#: functions.php:617
 msgid "Twitter link: "
 msgstr "Ссылка на Twitter "
 
-#: functions.php:620
+#: functions.php:621
 msgid "Youtube link: "
 msgstr "Ссылка на Youtube "
 
-#: functions.php:696
+#: functions.php:697
 msgid "Resently published"
 msgstr "Недавно опубликовано"
 
-#: functions.php:697
+#: functions.php:698
 msgid "New posts"
 msgstr "Новые посты"
 
-#: functions.php:737
+#: functions.php:738
 msgid " ago"
 msgstr " назад"
 
-#: functions.php:760
+#: functions.php:761
 msgid "Recently published"
 msgstr "Недавно опубликовано"
 
-#: functions.php:764
+#: functions.php:765
 msgid "Title:"
 msgstr "Заголовок:"
 
-#: functions.php:768 functions.php:923
+#: functions.php:769 functions.php:924
 msgid "Number of posts:"
 msgstr "Число постов:"
 
-#: functions.php:838 functions.php:918
+#: functions.php:839 functions.php:919
 msgid "Recommend articles"
 msgstr "Реклмендованные статьи"
 
-#: functions.php:1014
+#: functions.php:1015
 msgid "User left their data: "
 msgstr "Пользователь оставил свои контактные данные: "
 

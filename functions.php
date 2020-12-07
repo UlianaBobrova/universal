@@ -142,13 +142,14 @@ function the_breadcrumbs() {
 	$text['404']      = __('Error 404', 'universe'); // текст для страницы 404
 	$text['page']     = __('Page %s', 'universe'); // текст 'Страница N'
 	$text['cpage']    = __('Comments page %s', 'universe'); // текст 'Страница комментариев N'
+	$text['categ'] = __('category', 'universe');
 
 	$wrap_before    = '<div class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">'; // открывающий тег обертки
 	$wrap_after     = '</div><!-- .breadcrumbs -->'; // закрывающий тег обертки
 	$sep            = '<span class="breadcrumbs__separator"> › </span>'; // разделитель между "крошками"
 	$before         = '<span class="breadcrumbs__current">'; // тег перед текущей "крошкой"
 	$after          = '</span>'; // тег после текущей "крошки"
-
+	$name           = '<span class="breadcrumbs__category"> Category </span>';
 	$show_on_home   = 0; // 1 - показывать "хлебные крошки" на главной странице, 0 - не показывать
 	$show_home_link = 1; // 1 - показывать ссылку "Главная", 0 - не показывать
 	$show_current   = 1; // 1 - показывать название текущей страницы, 0 - не показывать
@@ -178,6 +179,7 @@ function the_breadcrumbs() {
 		if ( $show_home_link ) {
 			$position += 1;
 			echo $home_link;
+			echo $sep . $name;
 		}
 
 		if ( is_category() ) {
@@ -185,7 +187,8 @@ function the_breadcrumbs() {
 			foreach ( array_reverse( $parents ) as $cat ) {
 				$position += 1;
 				if ( $position > 1 ) echo $sep;
-				echo sprintf( $link, get_category_link( $cat ), get_cat_name( $cat ), $position );
+				echo $name;
+				echo sprintf( $link, get_category_link( $cat ), get_cat_name( $cat ),  $position );
 			}
 			if ( get_query_var( 'paged' ) ) {
 				$position += 1;
@@ -292,11 +295,11 @@ function the_breadcrumbs() {
 
 		} elseif ( is_page() && ! $parent_id ) {
 			if ( $show_home_link && $show_current ) echo $sep;
-			if ( $show_current ) echo $before . get_the_title() . $after;
+			if ( $show_current ) 
+			echo $before . get_the_title() . $after;
 			elseif ( $show_home_link && $show_last_sep ) echo $sep;
 
 		} elseif ( is_page() && $parent_id ) {
-			$page = get_page( $parent_id );
 			$parents = get_post_ancestors( get_the_ID() );
 			foreach ( array_reverse( $parents ) as $pageID ) {
 				$position += 1;
@@ -550,7 +553,7 @@ class Social_Widget extends WP_Widget {
 		parent::__construct(
 			'social_widget', // ID виджета, если не указать (оставить ''), то ID будет равен названию класса в нижнем регистре: foo_widget
 			__('Useful files','universal'),
-			array( 'description' => _e( 'Social networks', 'universal' ), 'classname' => 'widget-social', )
+			array( 'description' => __( 'Social networks', 'universal' ), 'classname' => 'widget-social', )
 		);
 
 		// скрипты/стили виджета, только если он активен
@@ -599,7 +602,7 @@ class Social_Widget extends WP_Widget {
 	 * @param array $instance сохраненные данные из настроек
 	 */
 	function form( $instance ) {
-        $title = @ $instance['title'] ?: _e( 'Useful files', 'universal' );
+        $title = @ $instance['title'] ?: __( 'Useful files', 'universal' );
 		$link_facebook = @ $instance['link_facebook'] ?: 'http://yandex.ru/';
 		$link_twitter = @ $instance['link_twitter'] ?: 'http://yandex.ru/';
 		$link_youtube = @ $instance['link_youtube'] ?: 'http://yandex.ru/';
