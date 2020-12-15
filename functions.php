@@ -7,7 +7,36 @@ if (!function_exists('universal_theme_setup')) :
 	// Подключение файлов перевода
 	load_theme_textdomain( 'universal', get_template_directory() . '/languages' );
 
+	// Удаляем роль при деактивации нашей темы
+	add_action( 'switch_theme', 'deactivate_universal_theme' );
+	function deactivate_universal_theme() {
+		remove_role( 'developer' );
+		remove_role( 'photograph' );
+		remove_role( 'designer' );
+	}
 
+
+	// Добавляем роль при активации нашей темы
+	add_action( 'after_switch_theme', 'activate_universal_theme' );
+	function activate_universal_theme() {
+			// Получим объект данных роли "Автор"
+	$author = get_role( 'author' );
+	add_role( 'developer', 'Разработчик', $author->capabilities);
+	add_role( 'photograph', 'Фотограф', 
+		[
+			'read'         => true,  // true разрешает эту возможность
+			'edit_posts'   => true,  // true разрешает редактировать посты
+			'upload_files' => true,  // может загружать файлы
+			'delete_posts' => false,
+		]);
+	add_role( 'designer', 'Дизайнер',
+		[
+			'read'         => true,  // true разрешает эту возможность
+			'edit_posts'   => true,  // true разрешает редактировать посты
+			'upload_files' => true,  // может загружать файлы
+			'delete_posts' => false,
+		]);
+	}
        //динамический вывод title 
        add_theme_support('title-tag');
        //добавляем возможность делать миниатюры изобраджений для статей
@@ -134,22 +163,22 @@ function create_videolesson_taxonomies(){
 function the_breadcrumbs() {
 
 	/* === ОПЦИИ === */
-	$text['home']     = __('Main', 'universe'); // текст ссылки "Главная"
+	$text['home']     = __('Main', 'universal'); // текст ссылки "Главная"
 	$text['category'] = '%s'; // текст для страницы рубрики
-	$text['search']   = __('Results of search %s', 'universe'); // текст для страницы с результатами поиска
-	$text['tag']      = __('Entries with tag "%s"', 'universe'); // текст для страницы тега
-	$text['author']   = __('Author articles %s', 'universe'); // текст для страницы автора
-	$text['404']      = __('Error 404', 'universe'); // текст для страницы 404
-	$text['page']     = __('Page %s', 'universe'); // текст 'Страница N'
-	$text['cpage']    = __('Comments page %s', 'universe'); // текст 'Страница комментариев N'
-	$text['categ'] = __('category', 'universe');
+	$text['search']   = __('Results of search %s', 'universal'); // текст для страницы с результатами поиска
+	$text['tag']      = __('Entries with tag "%s"', 'universal'); // текст для страницы тега
+	$text['author']   = __('Author articles %s', 'universal'); // текст для страницы автора
+	$text['404']      = __('Error 404', 'universal'); // текст для страницы 404
+	$text['page']     = __('Page %s', 'universal'); // текст 'Страница N'
+	$text['cpage']    = __('Comments page %s', 'universal'); // текст 'Страница комментариев N'
+	$text['categ'] = __('Category', 'universal');
 
 	$wrap_before    = '<div class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">'; // открывающий тег обертки
 	$wrap_after     = '</div><!-- .breadcrumbs -->'; // закрывающий тег обертки
 	$sep            = '<span class="breadcrumbs__separator"> › </span>'; // разделитель между "крошками"
 	$before         = '<span class="breadcrumbs__current">'; // тег перед текущей "крошкой"
 	$after          = '</span>'; // тег после текущей "крошки"
-	$name           = '<span class="breadcrumbs__category"> Category </span>';
+	$name           = '<span class="breadcrumbs__category">' . $text['categ'] . '</span>';
 	$show_on_home   = 0; // 1 - показывать "хлебные крошки" на главной странице, 0 - не показывать
 	$show_home_link = 1; // 1 - показывать ссылку "Главная", 0 - не показывать
 	$show_current   = 1; // 1 - показывать название текущей страницы, 0 - не показывать
@@ -737,7 +766,7 @@ class Resent_Post_Widget extends WP_Widget {
 						</h4>
 						<span class="resent-post-time">
 							<?php $time_diff = human_time_diff( get_post_time('U'), current_time('timestamp') );
-							echo $time_diff . __(' ago', 'universe')?>
+							echo $time_diff . __(' ago', 'universal')?>
 						</span>
 					</div>
 				</a>

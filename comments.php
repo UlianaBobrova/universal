@@ -171,7 +171,7 @@ if ( post_password_required() ) {
 		</p>',
 		'class_submit'         => 'comment-submit more',
 		'label_submit' =>  _e('No entries', 'universal'),
-		'submit_button'        => '<button name="%1$s" type="submit" id="%2$s" class="%3$s">%4$s</button>',
+		'submit_button'        => '<button name="%1$s" type="submit" id="%2$s" class="%3$s">Отправить</button>',
     ));
 	?>
 

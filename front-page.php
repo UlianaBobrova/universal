@@ -26,7 +26,21 @@
                     <img src="<?php echo get_avatar_url($author_id); ?>" alt="" class="avatar">
                     <div class="author-bio">
                         <span class="author-name"><?php the_author(); ?></span>
-                        <span class="author-rank"><?php _e('Position', 'universe') ?></span>
+                        <span class="author-rank"><?php
+                        // получаем список всех ролей
+                        $roles = wp_roles()->roles;
+                        // узнаем текущую роль пользователя
+                        $current_role = get_the_author_meta('roles', $author_id)[0];
+                        // перебираем все роли
+                        foreach($roles as $role => $value) {
+                            // если наша текущая роль совпадает с ролью из списка, 
+                            if($role == $current_role ) {
+                                // выводим роль
+                                echo $value['name'];
+                            }
+                        }
+                         ?>
+                        </span>
                     </div>
                 </a>
                 <div class="post-text">
@@ -414,7 +428,7 @@ if ( $query->have_posts() ) {
                     <div class="swiper-wrapper">
                         <!-- Slides -->
                         <!-- получаем список всех вложенных картинок -->
-                        <?php $images = get_attached_media( 'image');
+                        <?php $images = get_attached_media('image');
                     foreach ($images as $image) {
                         echo '<div class="swiper-slide"><img src="';
                         print_r($image -> guid);
@@ -445,7 +459,20 @@ if ( $query->have_posts() ) {
                         <img src="<?php echo get_avatar_url($author_id); ?>" alt="" class="avatar">
                         <div class="author-bio">
                             <span class="author-name"><?php the_author(); ?></span>
-                            <span class="author-rank"><?php _e('Position', 'universal')?></span>
+                            <span class="author-rank"><?php
+                             // получаем список всех ролей
+                        $roles = wp_roles()->roles;
+                        // узнаем текущую роль пользователя
+                        $current_role = get_the_author_meta('roles', $author_id)[0];
+                        // перебираем все роли
+                        foreach($roles as $role => $value) {
+                            // если наша текущая роль совпадает с ролью из списка, 
+                            if($role == $current_role ) {
+                                // выводим роль
+                                echo $value['name'];
+                            }
+                        }
+                             ?></span>
                         </div>
                     </a>
                     <h3 class="photo-report-title">

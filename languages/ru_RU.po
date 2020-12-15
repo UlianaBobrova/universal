@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: universal\n"
-"POT-Creation-Date: 2020-12-07 20:53+0300\n"
+"POT-Creation-Date: 2020-12-09 22:38+0300\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: My Super Team\n"
@@ -110,7 +110,7 @@ msgstr "Смотреть фото"
 msgid "Header menu"
 msgstr "Меню в шапке"
 
-#: functions.php:25 functions.php:387
+#: functions.php:25 functions.php:389
 msgid "Footer menu"
 msgstr "Меню в подвале"
 
@@ -260,7 +260,7 @@ msgstr "Преподаватели"
 
 #: functions.php:137
 msgid "Main"
-msgstr "На главную"
+msgstr "Главная"
 
 #: functions.php:139
 #, php-format
@@ -295,104 +295,104 @@ msgstr "Страница с комментариями %s"
 msgid "Category"
 msgstr "Категория"
 
-#: functions.php:363
+#: functions.php:365
 msgid "Sidebar in front page"
 msgstr "Сайдбар на главной странице"
 
-#: functions.php:365 functions.php:377 functions.php:389 functions.php:401
-#: functions.php:413
+#: functions.php:367 functions.php:379 functions.php:391 functions.php:403
+#: functions.php:415
 msgid "Add widget here"
 msgstr "Добавьте виджеты сюда"
 
-#: functions.php:375
+#: functions.php:377
 msgid "Sidebar with news"
 msgstr "Сайдбар с последними новостями"
 
-#: functions.php:399
+#: functions.php:401
 msgid "Footer text"
 msgstr "Текст в подвале"
 
-#: functions.php:411
+#: functions.php:413
 msgid "Sidebar content page"
 msgstr "Сайдбар на странице контента"
 
-#: functions.php:434 functions.php:476 functions.php:553 functions.php:603
+#: functions.php:436 functions.php:478 functions.php:555 functions.php:605
 msgid "Useful files"
 msgstr "Полезные файлы"
 
-#: functions.php:435
+#: functions.php:437
 msgid "Downloading files"
 msgstr "Файлы для скачивания"
 
-#: functions.php:465
+#: functions.php:467
 msgid "Download"
 msgstr "Скачать"
 
-#: functions.php:477
+#: functions.php:479
 msgid "Description"
 msgstr "Описание"
 
-#: functions.php:482
+#: functions.php:484
 msgid "Title: "
 msgstr "Заголовок "
 
-#: functions.php:486
+#: functions.php:488
 msgid "Description: "
 msgstr "Описание "
 
-#: functions.php:490
+#: functions.php:492
 msgid "Downloading link: "
 msgstr "Ссылка для скачивания "
 
-#: functions.php:554
+#: functions.php:556
 msgid "Social networks"
 msgstr "Социальные сети"
 
-#: functions.php:609
+#: functions.php:611
 msgid "Title "
 msgstr "Заголовок "
 
-#: functions.php:613
+#: functions.php:615
 msgid "Facebook link: "
 msgstr "Ссылка на Facebook "
 
-#: functions.php:617
+#: functions.php:619
 msgid "Twitter link: "
 msgstr "Ссылка на Twitter "
 
-#: functions.php:621
+#: functions.php:623
 msgid "Youtube link: "
 msgstr "Ссылка на Youtube "
 
-#: functions.php:697
+#: functions.php:699
 msgid "Resently published"
 msgstr "Недавно опубликовано"
 
-#: functions.php:698
+#: functions.php:700
 msgid "New posts"
 msgstr "Новые посты"
 
-#: functions.php:738
+#: functions.php:740
 msgid " ago"
 msgstr " назад"
 
-#: functions.php:761
+#: functions.php:763
 msgid "Recently published"
 msgstr "Недавно опубликовано"
 
-#: functions.php:765
+#: functions.php:767
 msgid "Title:"
 msgstr "Заголовок:"
 
-#: functions.php:769 functions.php:924
+#: functions.php:771 functions.php:926
 msgid "Number of posts:"
 msgstr "Число постов:"
 
-#: functions.php:839 functions.php:919
+#: functions.php:841 functions.php:921
 msgid "Recommend articles"
 msgstr "Реклмендованные статьи"
 
-#: functions.php:1015
+#: functions.php:1017
 msgid "User left their data: "
 msgstr "Пользователь оставил свои контактные данные: "
 
@@ -435,6 +435,9 @@ msgstr "Страницы:"
 #, php-format
 msgid "%1$s"
 msgstr ""
+
+#~ msgid "Positions"
+#~ msgstr "Должности"
 
 #~ msgid "Director"
 #~ msgstr "Должность"
